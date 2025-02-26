@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    display: flex;
+    height: 1000px;
+    font-family: Tahoma;
+}
+.array{
+    background-color: #3F4F44;
+    width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    height: 100px;
+}
+.arrElement{
+    background-color: #DCD7C9;
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 5px;
+    padding: 20px;
+    flex-grow: 1;
+}
+.selectElement{
+    background-color: blue;
+    color: white;
+    width: 80px;
+    text-align: center;
+    margin-right: 5px;
+    padding: 20px;
+    flex-grow: 1;
+}
+.txt{
+    font-size: 28px;
+    color: white;
+}
+.value{
+    font-size: 30px;
+    color: #ffc107;
+}
+
+#leftSide{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: #2C3930;
+    color: white;
+    font-size: 30px;
+}
+#rightSide{
+    width: 70%;
+    background-color: #2C3930;
+    border-left: 1px solid white;
+    display: flex;
+    flex-direction: column;
+}
+#rightHigh{
+    display: flex;
+    height: 20%;
+}
+#rightMid{
+    display: flex;
+    height: 20%;
+    justify-content: center;
+}
+#rightLow{
+    height: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.leftDivs{
+    padding: 20px;
+}
+
+.myButton {
+	box-shadow:inset 0px 0px 14px -3px #f2fadc;
+	background:linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
+	background-color:#dbe6c4;
+	border-radius:6px;
+	border:1px solid #b2b8ad;
+	display:inline-block;
+	cursor:pointer;
+	color:#757d6f;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ced9bf;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
+	background-color:#9ba892;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/linearStyles.css">
+</head>
+<body>
+    <div id="leftSide">
+        <div class="leftDivs">
+            <label>Array Elements:</label>
+            <input type="text" id="values" class="form-control" placeholder="n1,n2,n3,. . . ." aria-label="Username" aria-describedby="basic-addon1">
+            <input type="button" value="Create" id="createBtn" class="btn btn-outline-warning">
+        </div>
+        <div class="leftDivs">
+            <label>Target:</label>
+            <input type="text" id="target" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            <input type="button" value="Search" id="searchBtn" class="btn btn-outline-warning">
+        </div>
+        <div class="leftDivs">
+            <input type="button" value="Reset" id="resetBtn" class="btn btn-outline-light">
+        </div>
+    </div>
+    <div id="rightSide">
+        <div id="rightHigh"></div>
+        <div id="rightMid"></div>
+        <div id="rightLow"></div>
+    </div>
+    <script src="../JS/linearSearch.js" type="module"></script>
+</body>
+</html>
