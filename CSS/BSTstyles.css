@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+#container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #181b20;
+    /* #23272f; */
+}
+#leftSide{
+    width: 25%;
+    margin-top: 20px;
+    margin-left: 10px;
+    color: #F28A2E;
+    font-family: cursive;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+}
+#rightSide{
+    width: 75%;
+    display: flex;
+}
+#canvasSide{
+    width: 65%;
+}
+#textSide{
+    width: 35%;
+    font-family: cursive;
+    font-size: 40px;
+    color: whitesmoke;
+    margin-top: 80px;
+}
+canvas{
+    margin-left: 80px;
+    /* margin-right: 235px; */
+}
+#elements,#target,#newElement{
+    margin-top: 10px;
+    width: 210px;
+    height: 30px;
+    font-size: 16px;
+}
+#createBtn,#searchBtn,#insertBtn,#resetBtn{
+    margin-top: 10px;
+    width: 80px;
+    height: 30px;
+    font-size: 17px;
+    font-family: cursive;
+}
+#maxBtn{
+    margin-top: 10px;
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    font-family: cursive;
+}
+#minBtn{
+    margin-top: 10px;
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    font-family: cursive;
+}
