@@ -21,16 +21,16 @@ async function merge(arr, left, mid, right) {
   /*----------------------------*/
   for(let i=left;i<=mid;i++){
     let elem = document.getElementById('elem'+i)
-    elem.style.backgroundColor = "red"
+    elem.style.backgroundColor = "#055902"
   }
   for(let i=mid+1;i<=right;i++){
     let elem = document.getElementById('elem'+i)
-    elem.style.backgroundColor = "red"
+    elem.style.backgroundColor = "#055902"
   }
-  txt.style.color = 'red'
+  txt.style.color = '#055902'
   txt.innerHTML = "Merge"
-  await sleep(500)
-  txt.style.color = '#E8BCB9'
+  await sleep(1000)
+  // txt.style.color = '#E8BCB9'
   txt.innerHTML = ""
   for(let i=left;i<=mid;i++){
     let elem = document.getElementById('elem'+i)
@@ -40,7 +40,7 @@ async function merge(arr, left, mid, right) {
     let elem = document.getElementById('elem'+i)
     elem.style.backgroundColor = "#DCD7C9"
   }
-  await sleep(500)
+  await sleep(1000)
   /*----------------------------*/
 
   let i = 0, j = 0, k = left, s = left, t = 0, n = left
@@ -60,11 +60,11 @@ async function merge(arr, left, mid, right) {
     /*------------------------*/
     elem1 = document.getElementById(`elem${s+i}`)
     elem2 = document.getElementById(`elem${s+j+leftArr.length}`)
-    elem1.style.backgroundColor = 'green'
-    elem2.style.backgroundColor = 'green'
-    txt.style.color = 'green'
+    elem1.style.backgroundColor = '#055902'
+    elem2.style.backgroundColor = '#055902'
+    txt.style.color = '#055902'
     txt.innerHTML = 'Compare'
-    await sleep(500)
+    await sleep(1000)
     /*------------------------*/
     if (leftArr[i] <= rightArr[j]) {
       arr[k] = leftArr[i];
@@ -81,7 +81,7 @@ async function merge(arr, left, mid, right) {
     elem2.style.backgroundColor = '#DCD7C9'
     txt.style.color = '#E8BCB9'
     txt.innerHTML = ''
-    await sleep(500)
+    await sleep(1000)
     t++
     /*--------------------------*/
     k++;
@@ -92,7 +92,7 @@ async function merge(arr, left, mid, right) {
     arr[k] = leftArr[i];
     let elemUpdate = document.getElementById('elemUp'+t)
     elemUpdate.innerHTML = arr[k]
-    await sleep(500)
+    await sleep(1000)
     i++
     t++
     k++
@@ -103,31 +103,31 @@ async function merge(arr, left, mid, right) {
     arr[k] = rightArr[j];
     let elemUpdate = document.getElementById('elemUp'+t)
     elemUpdate.innerHTML = arr[k]
-    await sleep(500)
+    await sleep(1000)
     j++
     t++
     k++
   }
   /*update array*/
   // console.log(arr)
-  txt.style.color = '#F3C623'
+  txt.style.color = '#D99414'
   txt.innerHTML = 'Update Array'
   for(let i=0;i<leftArr.length+rightArr.length;i++){
     let elem = document.getElementById(`elem${left+i}`)
     let elemUp = document.getElementById(`elemUp${i}`)
     elem.innerHTML = arr[left+i]
-    elem.style.backgroundColor = "#F3C623"
-    elemUp.style.backgroundColor = "#F3C623"
-    await sleep(500)
+    elem.style.backgroundColor = "#D99414"
+    elemUp.style.backgroundColor = "#D99414"
+    await sleep(1000)
     elem.style.backgroundColor = '#DCD7C9'
     elemUp.style.backgroundColor = '#DCD7C9'
-    await sleep(500)
+    await sleep(1000)
   }
   txt.style.color = '#E8BCB9'
   txt.innerHTML = ''
   temp.innerHTML = ""
   temp.classList.remove('array')
-  await sleep(500)
+  await sleep(1000)
 }
   
   // Merge Sort Algorithm
@@ -136,10 +136,11 @@ export async function mergeSort(arr, left = 0, right = arr.length - 1) {
 
     for(let i=left;i<=right;i++){
         let elem = document.getElementById('elem'+i)
-        elem.style.backgroundColor = '#E8BCB9'
+        elem.style.backgroundColor = '#F28A2E'
     }
+    txt.style.color = '#F28A2E'
     txt.innerHTML = 'Merge Sort'
-    await sleep(500)
+    await sleep(1000)
 
     for(let i=left;i<=right;i++){
         let elem = document.getElementById('elem'+i)
@@ -147,7 +148,7 @@ export async function mergeSort(arr, left = 0, right = arr.length - 1) {
     }
     txt.innerHTML = ""
 
-    await sleep(500)
+    await sleep(1000)
     
     const mid = Math.floor((left + right) / 2);
     // Recursively sort the left and right halves
@@ -184,7 +185,7 @@ export function reset(){
   array.classList.remove('array')
   explain.innerHTML = ""
   temp.innerHTML = ""
-  array.classList.remove('array')
+  temp.classList.remove('array')
 
   createBtn.disabled = false
   sortBtn.disabled = false

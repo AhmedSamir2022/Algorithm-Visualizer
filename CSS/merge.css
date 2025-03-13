@@ -5,8 +5,8 @@ body{
     margin: 0;
     display: flex;
     height: 1000px;
-    font-family: Tahoma;
-    background-color: #2C3930;
+    font-family: cursive;
+    background-color: #181b20;
 }
 #container{
     display: flex;
@@ -47,7 +47,7 @@ body{
     display: flex;
 } */
 .array{
-    background-color: #3F4F44;
+    background-color: #688C86;
     width: 800px;
     height: 100px;
     padding: 20px;
@@ -65,7 +65,7 @@ body{
     flex-grow: 1;
 }
 .explain{
-    color: #E8BCB9;
+    color: #F28A2E;
     font-size: 40px;
     height: 100px;
     text-align: center;
