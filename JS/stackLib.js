@@ -55,20 +55,27 @@ export class Stack{
     Push(){
         //check stack overflow
         if(size < overflowFlag){
-        //create new node
-        const n = new Node(valueToPush.value)
-        //check if memory allocation successed
-        if(!n){
-            alert("can't allocate memory")
-            return
-        }
-        //link the new node to the current top node
-        n.next = this.head
-        //update the top to the new node
-        this.head = n
-        size++
-        popArr[size-1].value = valueToPush.value
-        drawNewNode()
+            if(valueToPush.value !== ''){
+                pushBtn.disabled = true
+                popBtn.disabled = true
+                //create new node
+                const n = new Node(valueToPush.value)
+                //check if memory allocation successed
+                if(!n){
+                    alert("can't allocate memory")
+                    return
+                }
+                //link the new node to the current top node
+                n.next = this.head
+                //update the top to the new node
+                this.head = n
+                size++
+                popArr[size-1].value = valueToPush.value
+                drawNewNode()
+            }
+            else{
+                alert('Enter element to push.')
+            }
         }
         else{
             alert('stack overflow, stack limit is 6 elements :D')
@@ -80,6 +87,8 @@ export class Stack{
             alert("stack is empty!")
         }
         else{
+            pushBtn.disabled = true
+            popBtn.disabled = true
             let temp = this.head
             this.head = this.head.next
             temp = null
@@ -88,6 +97,7 @@ export class Stack{
             y = popArr[size-1].y
             txtX = popArr[size-1].txtX
             txtY = popArr[size-1].txtY
+            pushBtn.disabled = true
             dragNodeXY()
         }
     }
@@ -181,6 +191,8 @@ function moveNodeY(){
         c.textAlign = 'center'
         c.fillText(nodeValue,txtX,txtY)
         resetValues()
+        pushBtn.disabled = false
+        popBtn.disabled = false
         return;
     }
 
@@ -204,6 +216,7 @@ function resetValues(){
 /*  */
 
 function dragNodeXY(){
+    // pushBtn.disabled = true
     c.clearRect(x-1,y-1,nodeWidth+2,nodeHeight+2)
     y -= dy
     txtY -= dy
@@ -242,6 +255,8 @@ async function dragNodeX(){
         c.clearRect(x-1,y-1,nodeWidth+2,nodeHeight+2)
         size--
         resetValues()
+        popBtn.disabled = false
+        pushBtn.disabled = false
         return
     }
     c.fillStyle = '#F28A2E'
@@ -257,3 +272,4 @@ async function dragNodeX(){
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
