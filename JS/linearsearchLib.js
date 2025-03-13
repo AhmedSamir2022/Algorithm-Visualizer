@@ -51,24 +51,24 @@ export async function linearSearch(arr){
             for(let i=0;i<arrSize;i++){
                 let elem = document.getElementById('elem'+i)
                 let elemValue = elem.innerHTML
-                elem.style.border = 'solid 3px #ffc107'
+                elem.style.border = 'solid 3px #D99414'
                 txt1.innerHTML = '<span class="value">'+elemValue+'</span> equals '+target+'?'
                 await sleep(500)
                 if(parseInt(elemValue)==target){
-                    elem.style.backgroundColor = '#ffc107'
+                    elem.style.backgroundColor = '#D99414'
                     txt2.innerHTML = 'Target Index is '+i
                     foundFlag = 1
                     break;
                 }
                 else{
-                    elem.style.backgroundColor = 'red'
+                    elem.style.backgroundColor = '#181b20'
                     elem.style.border = 0
                     elem.style.color = '#DCD7C9'
                 }
         
                 await sleep(1000)
             }
-            if(!foundFlag){
+            if(foundFlag === 0){
                 txt2.innerHTML = 'Target Not Found'
             }
         }

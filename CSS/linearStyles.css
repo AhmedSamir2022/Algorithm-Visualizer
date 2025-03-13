@@ -5,10 +5,10 @@ body{
     margin: 0;
     display: flex;
     height: 1000px;
-    font-family: Tahoma;
+    font-family: cursive;
 }
 .array{
-    background-color: #3F4F44;
+    background-color: #688C86;
     width: 800px;
     padding: 20px;
     margin: 20px auto;
@@ -39,20 +39,20 @@ body{
 }
 .value{
     font-size: 30px;
-    color: #ffc107;
+    color: #D99414;
 }
 
 #leftSide{
     display: flex;
     flex-direction: column;
     width: 30%;
-    background-color: #2C3930;
+    background-color: #181b20;
     color: white;
     font-size: 30px;
 }
 #rightSide{
     width: 70%;
-    background-color: #2C3930;
+    background-color: #181b20;
     border-left: 1px solid white;
     display: flex;
     flex-direction: column;
