@@ -133,8 +133,47 @@ export function drawStackBody(){
     c.font = '40px cursive'//35-->40
     c.fillStyle = '#688C86'
     c.fillText("Stack",350,640)//410-->350
+    drawTopArrow()
+}
+
+let arrowX1 = 100
+let arrowX2 = 190
+let arrowY1 = 625
+let arrowY2 = 625
+let sarr1Y = 615
+let sarr2Y = 635
+let darrowY = 60
+let topX = 80
+let topY = 610
+/* draw top arrow */
+async function drawTopArrow(){
+    // await sleep(2000)
+
+    c.beginPath()
+    c.moveTo(arrowX1,arrowY1)
+    c.lineTo(arrowX2,arrowY2)
+    c.lineWidth = 4
+    // c.strokeStyle = '#F28A2E'
+    c.stroke()
+    c.beginPath()
+    c.moveTo(arrowX2,arrowY2)
+    c.lineTo(180,sarr1Y)
+    c.stroke()
+    c.beginPath()
+    c.moveTo(arrowX2,arrowY2)
+    c.lineTo(180,sarr2Y)
+    c.stroke()
+    c.font = "28px cursive"
+    c.fillStyle = '#F28A2E'
+    c.textAlign = 'center'
+    c.fillText('top',topX,topY)
+    // await sleep(1000)
+    // c.fillStyle = '#F28A2E'
+    // c.fillRect(38,610,153,50)    
+    // c.clearRect(38,610,153,50)
 
 }
+
 
 /* function to draw new node */
 async function drawNewNode(){
@@ -190,6 +229,17 @@ function moveNodeY(){
         c.fillStyle = '#0D0D0D'
         c.textAlign = 'center'
         c.fillText(nodeValue,txtX,txtY)
+
+        c.clearRect(topX-25,topY-26,140,60)
+        // c.fillStyle = '#F28A2E'
+        // c.fillRect(topX-25,topY-26,140,60)
+
+        arrowY1 -= darrowY
+        arrowY2 -= darrowY
+        sarr1Y -= darrowY
+        sarr2Y -= darrowY
+        topY -= darrowY
+        drawTopArrow()
         resetValues()
         pushBtn.disabled = false
         popBtn.disabled = false
@@ -254,6 +304,18 @@ async function dragNodeX(){
         await sleep(700)
         c.clearRect(x-1,y-1,nodeWidth+2,nodeHeight+2)
         size--
+
+        c.clearRect(topX-25,topY-26,140,60)
+        // c.fillStyle = '#F28A2E'
+        // c.fillRect(topX-25,topY-26,140,60)
+
+        arrowY1 += darrowY
+        arrowY2 += darrowY
+        sarr1Y += darrowY
+        sarr2Y += darrowY
+        topY += darrowY
+        drawTopArrow()
+
         resetValues()
         popBtn.disabled = false
         pushBtn.disabled = false
