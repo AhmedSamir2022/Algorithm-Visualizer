@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VisualAlgo</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../CSS/mainStyles.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- navbar -->
+      <div class="row">
+        <nav class="navbar navbar-expand-md">
+          <div class="container-fluid">
+            <a class="navbar-brand big-shoulders-header" href="#"
+              ><span class="letter-space">ALGO</span
+              ><span class="header-color2 letter-space">LENS</span></a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarToggler"
+              aria-controls="navbarToggler"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="main.html"
+                    >Home</a
+                  >
+                </li>
+                <!-- Sorting links -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Sorting
+                  </a>
+                  <!-- dropdownlist -->
+                  <ul class="dropdown-menu dropdown-bg-color w-25">
+                    <!-- Bubble Sort -->
+                    <li>
+                      <a
+                        class="dropdown-item text-center"
+                        href="./bubbleSort.html"
+                        >Bubble</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <!-- Merge sort -->
+                    <li>
+                      <a
+                        class="dropdown-item text-center"
+                        href="./mergeSort.html"
+                        >Merge</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <!-- Searching Dropdown list -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Searching
+                  </a>
+                  <ul class="dropdown-menu dropdown-bg-color w-25">
+                    <li>
+                      <a
+                        class="dropdown-item text-center"
+                        href="./linearSearch.html"
+                        >Linear</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a
+                        class="dropdown-item text-center"
+                        href="./binarySearch.html"
+                        >Binary</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="BST.html">BST</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- INTRO -->
+      <div class="m-5 row text-center">
+        <h1>
+          <span class="big-shoulders-body letter-space">ALGO</span
+          ><span class="big-shoulders-body2 letter-space">LENS</span>
+        </h1>
+        <h4 class="text-white fs-6">Bringing Algorithms to Life</h4>
+      </div>
+      <!-- algorithms cards -->
+      <div class="row justify-content-evenly">
+        <div
+          class="card mb-5 mx-2 custome-card-bg cards-text"
+          style="width: 18rem"
+        >
+          <img src="#" class="card-img-top" alt="Sorting Image" />
+          <div class="card-body">
+            <h5 class="card-title">Sorting</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="./bubbleSort.html" class="btn custom-btn text-white mb-2"
+              >Bubble Sort</a
+            >
+            <a href="./mergeSort.html" class="btn custom-btn text-white"
+              >Merge Sort</a
+            >
+          </div>
+        </div>
+        <div class="card mb-5 mx-2 custome-card-bg" style="width: 18rem">
+          <img src="#" class="card-img-top" alt="Searching img" />
+          <div class="card-body">
+            <h5 class="card-title">Searching</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="./linearSearch.html" class="btn custom-btn text-white mb-2"
+              >Linear Search</a
+            >
+            <a href="./binarySearch.html" class="btn custom-btn text-white"
+              >Binary Search</a
+            >
+          </div>
+        </div>
+        <div class="card mb-5 mx-2 custome-card-bg" style="width: 18rem">
+          <img src="..." class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">BST</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="./BST.html" class="btn custom-btn text-white mb-2">BST</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
