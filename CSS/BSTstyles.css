@@ -9,8 +9,7 @@ body{
     display: flex;
     height: 100vh;
     width: 100vw;
-    background-color: #181b20;
-    /* #23272f; */
+    background-color: #0D0D0D;
 }
 #leftSide{
     width: 25%;
@@ -38,6 +37,7 @@ body{
 }
 canvas{
     margin-left: 80px;
+    border-left: 1px solid white;
     /* margin-right: 235px; */
 }
 #elements,#target,#newElement{
