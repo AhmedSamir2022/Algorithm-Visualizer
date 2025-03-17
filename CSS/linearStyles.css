@@ -46,13 +46,13 @@ body{
     display: flex;
     flex-direction: column;
     width: 30%;
-    background-color: #181b20;
-    color: white;
+    background-color: #0D0D0D;
+    color: #F28A2E;
     font-size: 30px;
 }
 #rightSide{
     width: 70%;
-    background-color: #181b20;
+    background-color: #0D0D0D;
     border-left: 1px solid white;
     display: flex;
     flex-direction: column;
