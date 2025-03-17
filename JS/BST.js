@@ -198,7 +198,7 @@ async function search(root,key){
         pos = calculateCanvasPosition(root,n,maxDepthValue,canvasWidth,canvasHeight,margin)
         ctx.beginPath()
         ctx.lineWidth = 2
-        ctx.fillStyle = 'rgba(140, 39, 3, 0.4)'
+        ctx.fillStyle = 'rgba(140, 39, 3, 0.6)'
         ctx.arc(pos.x, pos.y, 30, 0, 2 * Math.PI)
         ctx.fill()
         await sleep(600)
@@ -212,13 +212,15 @@ async function search(root,key){
             }
             if(root.key === key){
                 ctx.beginPath()
-                ctx.fillStyle = '#8C2703'
+                ctx.fillStyle = 'white'
+                // ctx.fillStyle = '#8C2703'
                 ctx.arc(pos.x, pos.y, 30, 0, 2 * Math.PI)
                 ctx.fill()
 
                 ctx.beginPath()
-                ctx.lineWidth = 2
-                ctx.strokeStyle = '#F2A71B'
+                ctx.lineWidth = 4
+                ctx.strokeStyle = '#D99414'
+                // ctx.strokeStyle = '#F2A71B'
                 ctx.arc(pos.x,pos.y,30,0,2*Math.PI)
                 ctx.stroke()
                 // Draw key inside the node
@@ -285,7 +287,7 @@ async function findMax(root){
         pos = calculateCanvasPosition(root,n,maxDepthValue,canvasWidth,canvasHeight,margin)
         ctx.beginPath()
         ctx.lineWidth = 2
-        ctx.fillStyle = 'rgba(140, 39, 3, 0.4)'
+        ctx.fillStyle = 'rgba(140, 39, 3, 0.6)'
         ctx.arc(pos.x, pos.y, 30, 0, 2 * Math.PI)
         ctx.fill()
         await sleep(600)
@@ -301,13 +303,13 @@ async function findMax(root){
         }
         else{
             ctx.beginPath()
-            ctx.fillStyle = '#8C2703'
+            ctx.fillStyle = 'white'
             ctx.arc(pos.x, pos.y, 30, 0, 2 * Math.PI)
             ctx.fill()
 
             ctx.beginPath()
-            ctx.lineWidth = 2
-            ctx.strokeStyle = '#F2A71B'
+            ctx.lineWidth = 4
+            ctx.strokeStyle = '#D99414'
             ctx.arc(pos.x,pos.y,30,0,2*Math.PI)
             ctx.stroke()
             // put the key value inside the node
@@ -339,7 +341,7 @@ async function findMin(root){
         pos = calculateCanvasPosition(root,n,maxDepthValue,canvasWidth,canvasHeight,margin)
         ctx.beginPath()
         ctx.lineWidth = 2
-        ctx.fillStyle = 'rgba(140, 39, 3, 0.4)'
+        ctx.fillStyle = 'rgba(140, 39, 3, 0.6)'
         ctx.arc(pos.x, pos.y, 30, 0, 2 * Math.PI)
         ctx.fill()
         await sleep(600)
@@ -355,13 +357,13 @@ async function findMin(root){
         }
         else{
             ctx.beginPath()
-            ctx.fillStyle = '#8C2703'
+            ctx.fillStyle = 'white'
             ctx.arc(pos.x, pos.y, 30, 0, 2 * Math.PI)
             ctx.fill()
 
             ctx.beginPath()
-            ctx.lineWidth = 2
-            ctx.strokeStyle = '#F2A71B'
+            ctx.lineWidth = 4
+            ctx.strokeStyle = '#D99414'
             ctx.arc(pos.x,pos.y,30,0,2*Math.PI)
             ctx.stroke()
             // put the key value inside the node
