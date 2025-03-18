@@ -16,6 +16,12 @@ addBtn.onclick = function(){
     addNewElement()
 }
 
+const addFirstBtn = document.getElementById('addFirstBtn')
+addFirstBtn.onclick = function(){
+    addFirstElement()
+}
+
+
 const removeBtn = document.getElementById('removeBtn')
 removeBtn.onclick = function(){
     removeElement()
@@ -55,7 +61,7 @@ async function searchOnTarget(){
         c.font = '40px cursive'
         c.fillStyle = 'white'
         c.textAlign = 'center'
-        c.fillText('Target is found',500,300)       
+        c.fillText('Target found',500,300)       
     }
     else{
         console.log('no')
@@ -63,7 +69,7 @@ async function searchOnTarget(){
         c.font = '40px cursive'
         c.fillStyle = 'white'
         c.textAlign = 'center'
-        c.fillText('Target is not found :(',500,300)   
+        c.fillText('Target not found :(',500,300)   
     }
     await sleep(4000)
     await drawLinkedList(ll)
@@ -75,6 +81,12 @@ function addNewElement(){
     const afterData = Number(document.getElementById('addAfter').value)
 
     ll.addAfter(afterData,data)
+    // ll.addFirst(data)
+}
+/* function to add  new element after specific node */
+function addFirstElement(){
+  const data = Number(document.getElementById('newData').value)
+  ll.addFirst(data)
 }
 
 /* function to remve element */
@@ -127,13 +139,90 @@ class LinkedList {
     this.maxSize = 6;
   }
 
-addFirst(data) {
+async addFirst(data) {
   const newNode = new LinkedListNode(data, this.head);
   this.head = newNode;
   if (!this.tail) {
     this.tail = newNode;
+
+    /*????????????????????????????????????????*/
+    // c.font = '28px cursive'
+    // c.fillStyle = '#F28A2E'
+    // c.textAlign = 'start'
+    // c.fillText('NULL',arr[ll.length-1].arrowX2+5+dx,arr[ll.length-1].arrowY2+10)    
+  }
+  else{
+      /* shift nodes */
+      c.clearRect(arr[0].nodeX,arr[0].nodeY,1000,50)
+      drawRestNods(0)
   }
   this.size++;
+
+       /***********************************************************************/
+       await sleep(500)
+       c.beginPath()
+       c.moveTo(arr[0].nodeX+80,arr[0].nodeY-80)
+       c.lineTo(arr[0].nodeX+80,arr[0].nodeY-20)
+       c.lineWidth = 4
+       c.strokeStyle = 'white'
+       c.stroke()
+
+       c.beginPath()
+       c.moveTo(arr[0].nodeX+80,arr[0].nodeY-20)
+       c.lineTo(arr[0].nodeX+80+5,arr[0].nodeY-20-10)
+       c.lineWidth = 4
+       c.strokeStyle = 'white'
+       c.stroke()
+
+       c.beginPath()
+       c.moveTo(arr[0].nodeX+80,arr[0].nodeY-20)
+       c.lineTo(arr[0].nodeX+80-5,arr[0].nodeY-20-10)
+       c.lineWidth = 4
+       c.strokeStyle = 'white'
+       c.stroke()
+
+       c.font = '28px cursive'
+       c.fillStyle = 'white'
+       c.textAlign = 'end'
+       c.fillText('Here',arr[0].nodeX+80-20,arr[0].nodeY-20-50)        
+
+       await sleep(3000)
+
+       await drawLinkedList(ll,0)
+       /**/
+       await sleep(300)
+       c.clearRect(arr[0].nodeX,arr[0].nodeY,80,50)
+       c.fillStyle = '#F28A2E'
+       c.fillRect(arr[0].nodeX,arr[0].nodeY,80,50)
+       c.font = '26px cursive'
+       c.fillStyle = '#0D0D0D'
+       c.textAlign = 'center'
+       c.fillText(data,arr[0].nodeX+40,arr[0].nodeY+35)
+       await sleep(300)
+       c.clearRect(arr[0].nodeX,arr[0].nodeY,80,50)
+       c.fillStyle = '#688C86'
+       c.fillRect(arr[0].nodeX,arr[0].nodeY,80,50)
+       c.font = '26px cursive'
+       c.fillStyle = '#0D0D0D'
+       c.textAlign = 'center'
+       c.fillText(data,arr[0].nodeX+40,arr[0].nodeY+35)
+       await sleep(300)
+       c.clearRect(arr[0].nodeX,arr[0].nodeY,80,50)
+       c.fillStyle = '#F28A2E'
+       c.fillRect(arr[0].nodeX,arr[0].nodeY,80,50)
+       c.font = '26px cursive'
+       c.fillStyle = '#0D0D0D'
+       c.textAlign = 'center'
+       c.fillText(data,arr[0].nodeX+40,arr[0].nodeY+35)
+       await sleep(300)
+       c.clearRect(arr[0].nodeX,arr[0].nodeY,80,50)
+       c.fillStyle = '#688C86'
+       c.fillRect(arr[0].nodeX,arr[0].nodeY,80,50)
+       c.font = '26px cursive'
+       c.fillStyle = '#0D0D0D'
+       c.textAlign = 'center'
+       c.fillText(data,arr[0].nodeX+40,arr[0].nodeY+35)
+
 }
 addLast(data) {
   const newNode = new LinkedListNode(data);
@@ -270,13 +359,14 @@ async addAfter(afterData, data) {
         c.textAlign = 'center'
         c.fillText(data,arr[idx+1].nodeX+40,arr[idx+1].nodeY+35)
 
-        console.log(ll)
+        // console.log(ll)
         return;
     }
     current = current.next;
     idx++
   }
-  throw new Error(`Node with data '${afterData}' not found in list!`);
+  alert(`Node with data '${afterData}' not found in list!`)
+  // throw new Error(`Node with data '${afterData}' not found in list!`);
 }
 async contains(data) {
   let current = this.head;
@@ -351,6 +441,21 @@ async remove(data) {
   if (this.head.data === data) {
     this.head = this.head.next;
     this.size--;
+    c.beginPath()
+    c.moveTo(arr[0].nodeX+3,arr[0].nodeY+3)
+    c.lineTo(arr[0].nodeX+77,arr[0].nodeY+47)
+    c.lineWidth = 8
+    c.strokeStyle = 'red'
+    c.stroke()
+    c.beginPath()
+    c.moveTo(arr[0].nodeX+3,arr[0].nodeY+47)
+    c.lineTo(arr[0].nodeX+77,arr[0].nodeY+3)
+    c.lineWidth = 8
+    c.strokeStyle = 'red'
+    c.stroke()
+    await sleep(2000)
+    c.clearRect(arr[0].nodeX,arr[0].nodeY,dx,50)
+    await sleep(1000)
     return;
   }
   let current = this.head;
@@ -380,7 +485,8 @@ async remove(data) {
     current = current.next;
     idx++
   }
-  throw new Error(`Node with data '${data}' not found in list!`);
+  alert(`Node with data '${data}' not found in list!`)
+  // throw new Error(`Node with data '${data}' not found in list!`);
 }
 toArray() {
   const arr = [];
