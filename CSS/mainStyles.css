@@ -55,9 +55,22 @@ div nav {
 .custom-btn {
   background-color: #688c86;
 }
+/* .custom-btn:hover {
+  color: black;
+  /* background-color: #688c86; 
+} */
 .custome-card-bg {
   background-color: #f28a2e;
+  color: black;
 }
 .cards-text {
   color: black;
 }
+
+/* 
+.Exclusive-Haast-Edition-Range-Rover-1-hex { color: #688c86; }
+.Exclusive-Haast-Edition-Range-Rover-2-hex { color: #F28A2E; }
+.Exclusive-Haast-Edition-Range-Rover-3-hex { color: #D9753B; }
+.Exclusive-Haast-Edition-Range-Rover-4-hex { color: #8C2703; }
+.Exclusive-Haast-Edition-Range-Rover-5-hex { color: #0D0D0D; } 
+*/
