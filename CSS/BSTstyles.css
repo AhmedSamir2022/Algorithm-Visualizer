@@ -39,6 +39,9 @@ canvas{
     margin-left: 80px;
     border-left: 1px solid white;
     /* margin-right: 235px; */
+    /* display: block;
+    width: 100%; 
+    height: auto; */
 }
 #elements,#target,#newElement{
     margin-top: 10px;
