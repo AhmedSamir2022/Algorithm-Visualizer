@@ -93,7 +93,7 @@ function addFirstElement(){
 async function removeElement(){
   const valueToRemove = Number(document.getElementById('valueToRemove').value)
   await ll.remove(valueToRemove)
-  await drawLinkedList(ll,0)
+  await drawLinkedList(ll,100)
   // console.log(ll)
 }
 

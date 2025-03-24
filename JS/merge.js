@@ -7,4 +7,3 @@ let resetBtn = document.getElementById('resetBtn')
 createBtn.addEventListener('click',lib.createArr)
 resetBtn.addEventListener('click',lib.reset)
 sortBtn.addEventListener('click',lib.sort)
-

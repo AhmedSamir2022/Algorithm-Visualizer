@@ -67,7 +67,7 @@ function createBST(){
     let input = document.getElementById('elements').value.split(',')
     let length = input.length
     if(input[0] !== ''){
-        elements = input.map(elem => Number(elem))
+        let elements = input.map(elem => Number(elem))
         root = new Node(elements[0])
         for(let i=1;i<length;i++){
             root = insert(root,elements[i])
@@ -184,6 +184,8 @@ function visualizeTree(root) {
 
 /* search function */
 async function search(root,key){
+    let canvasWidth
+    let canvasHeight
     if(n <= 3){
         canvasWidth = 200
         canvasHeight = 300
@@ -274,6 +276,8 @@ async function search(root,key){
 }
 /* function to find max value */
 async function findMax(root){
+    let canvasWidth
+    let canvasHeight
     if(n <= 3){
         canvasWidth = 200
         canvasHeight = 300
@@ -328,6 +332,8 @@ async function findMax(root){
 }
 /* function to find min value */
 async function findMin(root){
+    let canvasWidth
+    let canvasHeight
     if(n <= 3){
         canvasWidth = 200
         canvasHeight = 300
