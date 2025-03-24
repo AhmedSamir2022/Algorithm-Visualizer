@@ -55,13 +55,14 @@ export async function linearSearch(arr){
                 txt1.innerHTML = '<span class="value">'+elemValue+'</span> equals '+target+'?'
                 await sleep(500)
                 if(parseInt(elemValue)==target){
+                    txt1.innerHTML = ""
                     elem.style.backgroundColor = '#D99414'
                     txt2.innerHTML = 'Target Index is '+i
                     foundFlag = 1
                     break;
                 }
                 else{
-                    elem.style.backgroundColor = '#181b20'
+                    elem.style.backgroundColor = '#0D0D0D'
                     elem.style.border = 0
                     elem.style.color = '#DCD7C9'
                 }
@@ -69,6 +70,7 @@ export async function linearSearch(arr){
                 await sleep(1000)
             }
             if(foundFlag === 0){
+                txt1.innerHTML = ""
                 txt2.innerHTML = 'Target Not Found'
             }
         }
