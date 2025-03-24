@@ -3,48 +3,12 @@ body{
     padding: 0;
     height: 100%;
     overflow: hidden;
-    box-sizing: border-box;
-}
-#container{
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    background-color: #0D0D0D;
-}
-#leftSide{
-    margin-top: 20px;
-    margin-left: 10px;
-    width: 25%;
+    /* background-color: #0D0D0D; */
+    box-sizing: border-box;    
     color: #F28A2E;
-    font-family: cursive;
-    font-size: 22px;
-    display: flex;
-    flex-direction: column;
+    /* font-family: cursive; */
 }
-#rightSide{
-    width: 75%;
-    /* border: 2px solid red; */
-    /* box-sizing: border-box; */
-}
+
 canvas{
-    border-left: 1px solid white;
-    /* width: 100%; */
-    /* height: 100%; */
-    /* border: 2px solid #8C2703; */
-    /* box-sizing: border-box; */
+    /* border-left: 1px solid white; */
 }
-
-#valueToPush{
-    height: 25px;
-}
-#pushBtn,#popBtn{
-    margin-top: 20px;
-    width: 80px;
-    height: 40px;
-    cursor: pointer;
-    background-color: #F28A2E;
-    color: #0D0D0D;
-    font-family: cursive;
-    font-size: 16px;
-}
-
