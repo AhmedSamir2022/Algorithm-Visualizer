@@ -157,7 +157,7 @@ export async function mergeSort(arr, left = 0, right = arr.length - 1) {
     // Merge the sorted halves
     await merge(arr, left, mid, right);
     txt.style.color = "#FBFBFB"
-    txt.innerHTML = "Done..Array is sorted &#x1F60A"
+    txt.innerHTML = "Done..Array sorted"
     // resetBtn.disabled = false
 }
 

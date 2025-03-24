@@ -5,7 +5,6 @@ let rightLow = document.getElementById('rightLow')
 let arr = []
 let arrSize = 0
 let target = 0
-let foundFlag = 0
 
 let createFlag = 0
 let searchFlag = 1
@@ -36,6 +35,7 @@ function sleep(ms) {
 }  
 
 export async function linearSearch(arr){
+    let foundFlag = 0
     if(searchFlag){
         if(createFlag){
             searchFlag = 0
