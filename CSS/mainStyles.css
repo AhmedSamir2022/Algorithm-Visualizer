@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&display=swap');
+
+body {
+  background-color: #0d0d0d;
+  font-family: 'Big Shoulders Inline', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #0d0d0d;
+  font-size: larger;
+  letter-spacing: 1px;
+}
+
+.big-shoulders-header {
+  font-family: 'Big Shoulders Inline', sans-serif;
+  font-optical-sizing: auto;
+  font-size: xx-large;
+  font-weight: 800;
+  font-style: normal;
+  color: white;
+}
+.header-color2 {
+  color: #f28a2e;
+}
+.letter-space {
+  letter-spacing: 3px;
+  margin: 1px;
+}
+
+.big-shoulders-body {
+  font-family: 'Big Shoulders Inline', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-size: 5rem;
+  font-style: normal;
+  color: white;
+}
+.big-shoulders-body2 {
+  font-family: 'Big Shoulders Inline', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-size: 5rem;
+
+  font-style: normal;
+  color: #f28a2e;
+}
+
+div nav {
+  background-color: #688c86;
+}
+.dropdown-bg-color {
+  background-color: #be7433;
+}
+
+.custom-btn {
+  background-color: #688c86;
+}
+.custome-card-bg {
+  background-color: #f28a2e;
+}
+.cards-text {
+  color: black;
+}
