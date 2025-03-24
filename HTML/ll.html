@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linked list</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/mainStyles.css" />
+    <link rel="stylesheet" href="../CSS/ll.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-md">
+              <div class="container-fluid">
+                <a class="navbar-brand big-shoulders-header" href="#"
+                  ><span class="letter-space">ALGO</span
+                  ><span class="header-color2 letter-space">LENS</span></a
+                >
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarToggler"
+                  aria-controls="navbarToggler"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link active"
+                        aria-current="page"
+                        href="main.html"
+                        >Home</a
+                      >
+                    </li>
+                    <!-- Sorting dropdown links -->
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Sorting
+                      </a>
+                      <!-- dropdownlist -->
+                      <ul class="dropdown-menu dropdown-bg-color w-25">
+                        <!-- Bubble Sort -->
+                        <li>
+                          <a
+                            class="dropdown-item text-center"
+                            href="./bubbleSort.html"
+                            >Bubble</a
+                          >
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <!-- Merge sort -->
+                        <li>
+                          <a
+                            class="dropdown-item text-center"
+                            href="./mergeSort.html"
+                            >Merge</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- Searching Dropdown list -->
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Searching
+                      </a>
+                      <ul class="dropdown-menu dropdown-bg-color w-25">
+                        <li>
+                          <a
+                            class="dropdown-item text-center"
+                            href="./linearSearch.html"
+                            >Linear</a
+                          >
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <a
+                            class="dropdown-item text-center"
+                            href="./binarySearch.html"
+                            >Binary</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- DS list -->
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Data Structure
+                      </a>
+                      <ul class="dropdown-menu dropdown-bg-color w-25">
+                        <li>
+                          <a
+                            class="dropdown-item text-center"
+                            href="./linkedList.html"
+                            >Linked List</a
+                          >
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <a class="dropdown-item text-center" href="./stack.html"
+                            >Stack</a
+                          >
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <a class="dropdown-item text-center" href="./Queue.html"
+                            >Queue</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- BST link -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="BST.html">BST</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>                
+        <div class="row">
+            <div class="col-3">
+                <div>
+                    <label class="fs-5 pt-3">Linked list elements:</label>
+                    <input class="form-control mt-1 w-75" type="text" placeholder="n1,n2,n3..." aria-label="default input example" id="elements">
+                    <button type="button" class="btn btn-outline-light mt-4" id="createBtn">Create</button>
+                </div>
+                <div>
+                    <label class="fs-5 pt-3">Target:</label>
+                    <input class="form-control mt-1 w-50" type="text" placeholder="Enter one element" aria-label="default input example" id="target">
+                    <button type="button" class="btn btn-outline-light mt-4" id="searchBtn">Search</button>
+                </div>
+                <div>
+                    <label class="fs-5 pt-3">New element:</label>
+                    <input class="form-control mt-1 w-50" type="text" placeholder="new data" aria-label="default input example" id="newData">
+                    <label class="fs-5 pt-3">After:</label>
+                    <input class="form-control mt-1 w-50" type="text" placeholder="add after" aria-label="default input example" id="addAfter">
+                    <button type="button" class="btn btn-outline-light mt-4" id="addBtn">Add</button>
+                    <button type="button" class="btn btn-outline-light mt-4" id="addFirstBtn">Add first</button>
+                </div>
+                <div>
+                    <label class="fs-5 pt-3">Element to remove:</label>
+                    <input class="form-control mt-1 w-50" type="text" placeholder="Enter one element" aria-label="default input example" id="valueToRemove">
+                    <button type="button" class="btn btn-outline-light mt-4" id="removeBtn">Remove</button>
+                </div>
+            </div>
+            <div class="col-9">
+                <canvas width="1125" height="786"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <script  src="../JS/ll.js"></script>
+</body>
+</html>
